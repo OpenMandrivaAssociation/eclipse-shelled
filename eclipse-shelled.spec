@@ -1,7 +1,7 @@
 Summary:          Eclipse Shell script editor
 Name:             eclipse-shelled
 Version:          1.0.3
-Release:          %mkrel 0.0.1
+Release:          %mkrel 0.0.2
 License:          Common Public License
 URL:              http://sourceforge.net/projects/shelled
 Group:            Development/Java
@@ -15,8 +15,9 @@ BuildArch:        noarch
 BuildRoot:        %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
-The eclipse-egit package contains Eclipse plugins for
-interacting with Git repositories.
+ShellEd is a superb shell script editor for Eclipse. 
+The great benefit of this plugin is the integration of man page information
+ for content assist and text hover.
 
 %prep
 %setup -q -c 
@@ -49,7 +50,7 @@ homedir=$(cd home > /dev/null && pwd)
 rm -rf $RPM_BUILD_ROOT
 install -d -m755 $RPM_BUILD_ROOT/%{_datadir}/eclipse
 
-# egit main feature
+# shelled main feature
 unzip -q -d $RPM_BUILD_ROOT%{_datadir}/eclipse/.. \
             build/rpmBuild/com.something.eclipse.shelled.zip
 

@@ -1,9 +1,9 @@
-%define eclipse_base     %{_datadir}/eclipse
+%define eclipse_base     %{_libdir}/eclipse
 
 Summary:          Eclipse Shell script editor
 Name:             eclipse-shelled
 Version:          1.0.3
-Release:          %mkrel 3.0.2
+Release:          %mkrel 3.0.3
 License:          Common Public License
 URL:              http://sourceforge.net/projects/shelled
 Group:            Development/Other
@@ -31,10 +31,11 @@ The great benefit of this plugin is the integration of man page information
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d -m755 $RPM_BUILD_ROOT/%{_datadir}/eclipse
+installDir=${RPM_BUILD_ROOT}/%{_datadir}/eclipse/dropins/shelled
+install -d -m755 $installDir
 
 # shelled main feature
-unzip -q -d $RPM_BUILD_ROOT%{_datadir}/eclipse/.. \
+unzip -q -d $installDir \
             build/rpmBuild/com.something.eclipse.shelled.zip
 
 %clean 
@@ -42,7 +43,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(0644,root,root,0755)
-%{_datadir}/eclipse/features/com.something.eclipse.shelled*
-%{_datadir}/eclipse/plugins/com.something.eclipse.script*
-%{_datadir}/eclipse/plugins/com.something.eclipse.shelled*
- 
+%{_datadir}/eclipse/dropins/shelled 

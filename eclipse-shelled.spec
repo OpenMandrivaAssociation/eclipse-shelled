@@ -4,7 +4,7 @@
 Summary:          Eclipse Shell script editor
 Name:             eclipse-shelled
 Version:          1.0.4
-Release:          %mkrel 2
+Release:          %mkrel 3
 License:          Common Public License
 URL:              http://sourceforge.net/projects/shelled
 Group:            Development/Other

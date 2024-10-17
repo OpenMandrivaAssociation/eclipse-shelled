@@ -6,7 +6,7 @@ Name:             eclipse-shelled
 Version:          2.0.0
 Release:          0.M3.1.3
 License:          EPL
-URL:              http://sourceforge.net/projects/shelled
+URL:              https://sourceforge.net/projects/shelled
 Group:            Development/Java
 Source0:          http://downloads.sourceforge.net/project/shelled/shelled/ShellEd%202.0.0%20M3/ShellEd-Sources-2.0.0_M3.zip
 Requires:         eclipse-platform >= 1:3.4.0
